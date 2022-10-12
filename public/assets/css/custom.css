@@ -1,0 +1,321 @@
+div.error {
+	color: red;
+	font-size: 14px;
+	margin: 3px 5px
+}
+input.error, select.error, textarea.error {
+	border: 1px solid red;
+	background-color: #ffe6e7
+}
+.pointer {
+	cursor: pointer;
+}
+.ck-editor__editable {
+	min-height: 200px!important
+}
+.rating-color {
+	color: #ffc000;
+}
+video {
+	width: 100%;
+	height: auto;
+}
+.star-rating {
+--star-size:1.9;
+	padding: 0;
+	border: none;
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	text-align: left;
+	user-select: none;
+	font-size: 2em;
+font-size:calc(var(--star-size) * 1em);
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	margin-bottom: 1em
+}
+.star-rating>label {
+	display: inline-block;
+	position: relative;
+	margin-top: 0
+}
+.star-rating:not(:hover)>input:checked~label, .star-rating>:hover, .star-rating>:hover~label {
+	color: transparent;
+	cursor: inherit
+}
+.star-rating:not(:hover)>input:checked~label:before, .star-rating>:hover:before, .star-rating>:hover~label:before {
+	content: "★";
+	position: absolute;
+	left: 0;
+	color: gold
+}
+.star-rating>input {
+	position: relative;
+	transform: scale(3);
+	transform: scale(var(--star-size));
+	top: -.5em;
+top:calc(var(--star-size)/ 6 * -1em);
+margin-left:-1.em;
+margin-left:calc(var(--star-size)/ 1 * -1em);
+	z-index: 2;
+	opacity: 0;
+	font-size: initial
+}
+
+/* Custom css*/
+  @media screen and (min-width: 981px)
+  {
+.header-top a i {
+  font-size: 20px;
+  margin: 0 5px !important;
+}
+}
+.carousel-caption {
+	left: 6.7% !important;
+}
+footer h2
+{
+	font-weight: bold !important;
+}
+.footerBox form .form-control
+{
+	background-color: #fff !important;
+}
+body p {
+  line-height: 1.7em !important;
+} 
+h2.styleTitle
+{
+	color: var(--brandblue) !important;
+	font-size: 36px !important;
+}
+.blogs h5.card-title a
+{
+color: var(--brandblue) !important;
+text-decoration: none;
+}
+.blogs h5.card-title a:hover, .blogs h5.card-title a:focus
+{
+	color: #000;
+	text-decoration: none;
+}
+.page-item.active .page-link
+{
+	color: #fff !important;
+}
+.pagination
+{
+	margin: 35px 0 0 !important;
+}
+.blogs h5.card-title
+{
+	padding-top: 0 !important;
+}
+.card-body {
+  padding: 2rem 2rem !important;
+}
+.card-text p
+{
+	line-height: 30px !important;
+	margin: 0 0 20px !important;
+}
+.card-text strong
+{
+	color: #000 !important;
+}
+.card-text a
+{
+	color: var(--brandblue) !important;
+	text-decoration: none;
+}
+.card-text a:hover, .card-text a:focus
+{
+	color: #000 !important;
+}
+.blog-right
+{
+	padding:15px 25px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgb(72 69 224 / 10%);
+margin-top: 2rem !important;
+}
+.blog-right .blog-list
+{
+	padding: 10px 0;
+	border-bottom: 1px dotted #383838;
+}
+.blog-right .blog-list:last-child
+{
+	border-bottom: none;
+}
+a.blogSingleLink
+{
+	line-height: 30px !important;
+}
+a.blogSingleLink:hover, a.blogSingleLink:focus
+{
+	color: #000 !important;
+}
+.btn-green:hover
+{
+	background: #05a3ad !important;
+	color: #fff !important;
+}
+.form-group
+{
+	margin: 0 0 10px !important;
+}
+.form-group label
+{
+	display: block !important;
+	margin: 0 0 10px !important;
+}
+.formbox
+{
+	padding:30px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgb(72 69 224 / 10%);
+	margin: 0 0 50px;
+}
+.formbox .form-control
+{
+	border-radius: 0 !important;
+
+}
+.contact-left
+{
+	background-color: #0cbfc9;
+	border-radius: 6px;
+	padding: 30px;
+	color: #fff;
+}
+.contact-left h2
+{
+	font-size: 24px  !important;
+	font-weight: bold  !important;
+	color: #fff !important;
+	margin: 0 0 15px;
+}
+.contact-left h3
+{
+	line-height: 32px;
+}
+
+
+.form-style a
+{
+	color: var(--brandblue);
+	text-decoration: none;
+}
+.form-style a:hover, .form-style a:focus
+{
+	color: #000;
+}
+.phIcon{ display: none; }
+@media (max-width:800px) {
+.header-top.show-icons .td.connect {position: fixed;
+    right: inherit !important;
+    left: 0 !important;
+    width: 100%;
+    max-width: fit-content;
+    top: 90%  !important;
+    bottom: 0  !important;
+    height: 100vw;
+    max-height: 100px;
+    transform: translate(0, 0%)  !important;}
+}
+@media (max-width:1000px) {
+.header-top.show-icons .td.connect {position: fixed;
+    right: 0;
+    left:inherit ;
+    display: grid;
+    width: 100%;
+    max-width: fit-content;
+    top: 50% ;
+    bottom: 0;
+    height: 100vw;
+    max-height: 100px;
+    transform: translate(0, -50%);}
+}
+a.text-navy
+{
+	color: #0cbfc9 !important;
+	text-decoration: none;
+}
+a.text-navy:hover, a.text-navy:focus
+{
+	color: #000 !important;
+}
+.font-bold
+{
+	font-weight: bold;
+	line-height: 35px;
+}
+@media (max-width:767px) {
+.footerBox
+{
+	margin: 0 0 30px;
+}
+.btn-green
+{width: 100%;
+}
+div#social-links ul li a
+{
+	font-size: 26px !important;
+	margin: 0 !important;
+}
+.erollandShare ul.btnList li button.btn {
+  height: 37px !important;
+}
+}
+@media screen and (max-width:980px) {
+	.header-top a i + span, header.justified .connect {
+		display: none !important;
+	}
+}
+   @media screen and (max-width: 980px){
+.mobile-menu-button {
+  left: 18px;
+}
+}
+.dtls-bdr
+{
+	padding: 7px 5px;
+	border-right:1px solid #fff ;
+	text-align: center;
+}
+.dtls-bdr:last-child
+{
+	border-right:none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #fff !important;
+  background-color: #0cbfc9 !important;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+.page-content
+{
+
+}
+.page-content a
+{
+	color: #0cbfc9;
+	text-decoration: none;
+}
+.page-content a:hover, .page-content a:focus
+{
+	color: #000 !important;
+	text-decoration: none;
+}
+.page-content ul
+{
+	list-style: disc;
+	margin: 0 0 0 22px;
+	color: #0cbfc9;
+}
+.page-content ul li
+{
+	padding: 7px 0 !important;
+}

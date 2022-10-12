@@ -1,0 +1,145 @@
+
+	.lead-testimonial-cont {
+	    width: 100%;
+	    max-width: 1170px;
+	    min-height: 230px;
+	    margin: 0 auto;
+	    padding: 30px;
+	    position: relative;
+		z-index: 1;
+	}
+	.lead-testimonial-cont:after {
+		position: absolute;
+	    content: '';
+	    bottom: -31px;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    background-image: url(http://demosoft.indicsoft.com/SalmanDemo/onspon-html/other-pages/image/tstmnl-box-shadow.png);
+	    width: 840px;
+	    height: 31px;
+	}
+	/*.lead-testimonial-cont:before {
+	    content: 'By: Salman Raza';
+	    font-family: 'Roboto', cursive;
+	    position: absolute;
+	    bottom: -25px;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    color: rgba(0, 0, 0, 0.9);
+	    font-size: 10px;
+	    letter-spacing: 5px;
+	    font-weight: 500;
+	    white-space: nowrap;
+	    color: #545454;
+	    text-transform: uppercase;
+	}*/
+	.lead-testimonial-cont > h2 {
+		position: absolute;
+		text-align: center;
+		margin: -55px 0 0 0;
+		font-size: 14px;
+		left: 10px;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		color: #444;
+	}
+	.lead-tstmnl-slider {
+	    width: 100%;
+	    height: 230px;
+	    float: left;
+	    overflow: hidden;
+	}
+	.lead-tstmnl-slide {
+		width: 100%;
+		max-width: 1140px;
+		height: 100%;
+		float: left;
+	}
+	.lead-tstmnl-slide:focus {outline: none;}
+	.lead-tstmnl-slide .lead-tstmnl-img {
+		float: left;
+		width: 160px;
+		height: 160px;
+		border-radius: 100%;
+		border:5px solid rgba(0,0,0,0.08);
+		overflow: hidden;
+		margin:8px 30px 0 0;
+	}
+	.lead-tstmnl-slide .lead-tstmnl-img img {width: 100%;}
+	.lead-tstmnl-text-cont {
+		float: left;
+		width: 82.8%;
+		height: 168px;
+		position: relative;
+	}
+	.lead-tstmnl-comment {
+		float: left;
+		display: block;
+		width: 97.5%;
+		position: relative;
+		padding: 20px 25px;
+		max-height: 120px;
+		overflow: hidden;
+		font-size: 16px;
+		line-height: 24px;
+		color: var(--black);
+	}
+	/*.lead-tstmnl-comment:before,
+	.lead-tstmnl-comment:after {
+		position: absolute;
+		content: '';
+		width: 20px;
+		height: 20px;
+		background-image: url(http://demosoft.indicsoft.com/SalmanDemo/onspon-html/other-pages/image/tstmnl-quate.png);
+	}*/
+	.lead-tstmnl-comment:before{top: 0; left: 0;}
+	.lead-tstmnl-comment:after {bottom: 0;right: 0;background-position: 20px 0;}
+	.lead-tstmnl-nm-dsg {
+		position: relative;
+		padding-left: 25px;
+		padding-bottom: 25px;
+	}
+	.lead-tstmnl-nm-dsg li {display: inline-block;float: left;padding: 0 15px;border-left: 1px solid #6b6b6b;font-size: 15px; line-height: 14px;letter-spacing: 0.5px;color: #6b6b6b;}
+	.lead-tstmnl-nm-dsg li:first-child{border-left: 0;padding-left: 0;font-weight: 700;color: #fff; font-size: 22px;}
+	.slick-dots button {display: none;}
+	.lead-tstmnl-slider .slick-dots {position: absolute;
+    bottom: 5px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;}
+	.lead-tstmnl-slider .slick-dots li {
+		list-style: outside none none;
+		display: inline-block;
+		cursor: pointer;
+		width: 40px;
+		height: 6px;
+		border-radius: 10px;
+		margin: 0px 6px 0px 0px;
+		background-color: #0CBFC9;
+		position: relative;
+	}
+	.lead-tstmnl-slider .slick-dots li.slick-active {background-color:#78F199;}
+	
+	
+	@media screen and (max-width:981px) {
+	    .lead-testimonial-cont {padding: 30px 0; max-width: 100%; overflow: hidden;}
+	    .owl-carousel .owl-item img, .cardPic img {height: 170px;}
+	    .titleWithAllbtn.pt-5 {padding-top: 1.5rem!important;}
+	}
+
+
+	@media screen and (max-width:768px) {
+	.lead-tstmnl-slider { height: auto!important;}
+    .lead-tstmnl-slide .lead-tstmnl-img { float: none;}
+    .lead-tstmnl-text-cont {float: none; width: 100%; max-width: 100%!important; height: auto;}
+    
+    .lead-tstmnl-nm-dsg { padding: 20px 0 0 0!important;}
+    .lead-tstmnl-comment {float: none;
+    display: block;
+    width: 100%; max-width: 100%!important; max-height: max-content;
+    padding: 20px 0;}
+    
+    }
+

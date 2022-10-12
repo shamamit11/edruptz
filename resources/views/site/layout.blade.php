@@ -1,0 +1,9 @@
+@include('site.includes.metahead')
+<body>
+@include('site.includes.header')
+@yield('content')
+@include('site.includes.footer')
+@include('site.includes.scripts')
+@yield('footer-scripts')
+</body>
+</html>
