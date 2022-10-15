@@ -23,7 +23,7 @@ class ResetPasswordRequest extends WebRequest
     public function rules()
     {
         return [
-            'token' => 'required|exists:password_resets,token',
+            'token' => 'required',
 			'password' => [
                 'required',
                 'string',

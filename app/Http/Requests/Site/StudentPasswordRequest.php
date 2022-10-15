@@ -23,7 +23,8 @@ class StudentPasswordRequest extends WebRequest
     public function rules()
     {
         return [
-            'email' => 'required|email||exists:students,email',
+            'email' => 'required|email|exists:students,email',
         ];
     }
+    
 }
