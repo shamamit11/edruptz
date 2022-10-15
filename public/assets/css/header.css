@@ -465,17 +465,26 @@ header {
 .header-top .td.icon {
 	position: relative;
 	width: 90px;
-	text-align: center
+	text-align: center;
+	transition: all 0.3s linear;
+}
+.header-top .td.icon:hover
+{
+	 transform: translateY(-5px);
 }
 .header-top .td.icon a, .header-top .td.icon .search-button, .header-top .td.icon .mobile-menu-button {
-	cursor: pointer
+	cursor: pointer;	
+
+
 }
+
 .header-top .social-wrap {
 	display: inline-block
 }
 .header-top a {
 	margin-right: 0;
 		text-decoration: none;
+		
 }
 .header-top a i {
 	font-size: 24px
@@ -672,6 +681,10 @@ nav.desktop-menu ul li a {
 	padding-top: 16px;
 	padding-bottom: 16px;
 	padding-right: 16px
+}
+nav.desktop-menu ul li a:hover, header.header.light_text a:hover
+{
+	color: #0cbfc9 !important;
 }
 nav.desktop-menu li ul {
 	position: absolute;

@@ -41,7 +41,7 @@
                   <div class="error">{{$errors->first('password')}}</div>
                   @endif </div>
                 <div class="form-group">
-                  <label>Verify</label>
+                  <label>Re-password</label>
                   <input class="form-control" name="verify" value="{{old('verify')}}" placeholder="Password (again)" type="password">
                   @if($errors->has('verify'))
                   <div class="error">{{$errors->first('verify')}}</div>
@@ -74,7 +74,7 @@
                   <div class="error">{{$errors->first('password')}}</div>
                   @endif </div>
                 <div class="form-group">
-                  <label>Verify</label>
+                  <label>Re-password</label>
                   <input class="form-control" name="verify" value="{{old('verify')}}" placeholder="Password (again)" type="password">
                   @if($errors->has('verify'))
                   <div class="error">{{$errors->first('verify')}}</div>

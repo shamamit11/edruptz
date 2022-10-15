@@ -39,14 +39,14 @@
           <div class="courseDetails">
             <nav>
               <div class="nav nav-pills" id="nav-tab" role="tablist">
-                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-description" type="button" role="tab" aria-controls="nav-description" aria-selected="true">About Me</button>
-                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-courses" type="button" role="tab" aria-controls="nav-courses" aria-selected="false">Courses</button>
+                <button class="nav-link active" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-courses" type="button" role="tab" aria-controls="nav-courses" aria-selected="true">Courses</button>
+                <button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-description" type="button" role="tab" aria-controls="nav-description" aria-selected="false">About Me</button>
                 <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-reviews" type="button" role="tab" aria-controls="nav-reviews" aria-selected="false">Reviews ({{ count($row->reviews)}})</button>
               </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab"> {!! $row->about_me !!} </div>
-              <div class="tab-pane fade" id="nav-courses" role="tabpanel" aria-labelledby="nav-courses-tab">
+              <div class="tab-pane fade" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab"> {!! $row->about_me !!} </div>
+              <div class="tab-pane fade  show active" id="nav-courses" role="tabpanel" aria-labelledby="nav-courses-tab">
                 <div class="row gx-5">
                 @if(count($row->courses) > 0)
                  @foreach($row->courses as $course)

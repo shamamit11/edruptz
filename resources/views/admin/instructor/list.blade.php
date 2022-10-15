@@ -46,7 +46,7 @@ use App\Models\CourseReview;
                 <tbody>
                     @foreach ($data as $row)
                     @php $last_updated = Course::where('instructor_id', $row->id)->orderBy('updated_at',
-                    'asc')->first();
+                    'desc')->first();
                     @endphp
                     <tr id="tr{{ $row->id }}">
                         <td>{{ $count++ }}</td>
@@ -63,7 +63,9 @@ use App\Models\CourseReview;
                             @endif</td>
                         <td style="text-align: center">{{ $row->commission }}%</td>
                         <td style="text-align: center">{{ ($row->status == 1) ? "Active" : "Inactive" }}</td>
-                        <td style="text-align: center"><a href="{{route('admin-instructor-add', ['id='.$row->id])}}"
+                        <td style="text-align: center"><a href="{{route('admin-instructor-detail', ['id='.$row->id])}}"
+                                class="btn btn-sm btn-primary rounded-pill"><span class="icon"><i
+                                        class='bx bxs-show'></i></span></a> <a href="{{route('admin-instructor-add', ['id='.$row->id])}}"
                                 class="btn btn-sm btn-warning rounded-pill"><span class="icon"><i
                                         class='bx bxs-pencil'></i></span></a></td>
                     </tr>

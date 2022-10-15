@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Requests\Site;
-
 use App\Http\Requests\WebRequest;
 
-class InstructorRegisterRequest extends WebRequest
+class ResetPasswordRequest extends WebRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +23,8 @@ class InstructorRegisterRequest extends WebRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'email' => ($this->user_type) ? 'required|email|unique:instructors' : '',
-            'password' => [
+            'token' => 'required|exists:password_resets,token',
+			'password' => [
                 'required',
                 'string',
                 'min:8', // must be at least 8 characters in length
@@ -38,8 +36,8 @@ class InstructorRegisterRequest extends WebRequest
             'verify' => 'required|same:password',
         ];
     }
-
-    public function messages()
+	
+	public function messages()
     {
         return [
             'password' => __('At least 8 characters with 1 Uppercase, 1 Number and 1 character'),

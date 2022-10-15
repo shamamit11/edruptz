@@ -9,7 +9,9 @@ use App\Models\Commission;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Carbon\Carbon;
 use Mail;
+use DB;
 
 class AuthService
 {
@@ -96,6 +98,67 @@ class AuthService
         } else {
             return false;
         }
+    }
+
+    public function passwordInstructor($request)
+    {
+        $token = Str::random(64);
+        DB::table('password_resets')->insert([
+            'email' => $request['email'],
+            'token' => $token,
+            'created_at' => Carbon::now(),
+        ]);
+
+        Mail::send('email.instrutor_password', ['token' => $token], function ($message) use ($request) {
+            $message->to($request['email']);
+            $message->subject('Reset Password');
+        });
+
+    }
+
+
+    public function savePasswordInstructor($request)
+    {
+        $updatePassword = DB::table('password_resets')
+            ->where('token', $request['token'])
+            ->first();
+
+        if (!$updatePassword) {
+            return 'error';
+        }
+        Instructor::where('email', $updatePassword->email)->update(['password' => Hash::make($request['password'])]);
+        DB::table('password_resets')->where('email', $updatePassword->email)->delete();
+        return 'success';
+    }
+
+    public function passwordStudent($request)
+    {
+        $token = Str::random(64);
+        DB::table('password_resets')->insert([
+            'email' => $request['email'],
+            'token' => $token,
+            'created_at' => Carbon::now(),
+        ]);
+
+        Mail::send('email.student_password', ['token' => $token], function ($message) use ($request) {
+            $message->to($request['email']);
+            $message->subject('Reset Password');
+        });
+
+    }
+
+    public function savePasswordStudent($request)
+    {
+        $updatePassword = DB::table('password_resets')
+            ->where('token', $request['token'])
+            ->first();
+
+        if (!$updatePassword) {
+            return 'error';
+        }
+        Student::where('email', $updatePassword->email)->update(['password' => Hash::make($request['password'])]);
+        DB::table('password_resets')->where('email', $updatePassword->email)->delete();
+        return 'success';
     }
 
 }

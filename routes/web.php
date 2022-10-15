@@ -22,7 +22,16 @@ Route::get('login', 'AuthController@login')->name('login');
 Route::post('login/student', 'AuthController@loginStudent')->name('login-student');
 Route::post('login/instructor', 'AuthController@loginInstructor')->name('login-instructor');
 
-Route::get('forgot-password', 'AuthController@password')->name('forgot-password');
+Route::get('forgot-password-instructor', 'AuthController@passwordInstructor')->name('forgot-password-instructor');
+Route::post('forgot-password-instructor', 'AuthController@forgotPasswordInstructor')->name('forgot-password-instructor');
+Route::get('reset-password-instructor/{token}', 'AuthController@resetPasswordInstructor')->name('reset-password-instructor');
+Route::post('save-password-instructor', 'AuthController@savePasswordInstructor')->name('save-password-instructor');
+
+Route::get('forgot-password-student', 'AuthController@passwordStudent')->name('forgot-password-student');
+Route::post('forgot-password-student', 'AuthController@forgotPasswordStudent')->name('forgot-password-student');
+Route::get('reset-password-student/{token}', 'AuthController@resetPasswordStudent')->name('reset-password-student');
+Route::post('save-password-student', 'AuthController@savePasswordStudent')->name('save-password-student');
+
 Route::get('cart', 'CartController@index')->name('cart');
 Route::post('cart/add', 'CartController@cartAdd')->name('cart-add');
 Route::get('cart/delete/{id}', 'CartController@delete')->name('cart-delete');

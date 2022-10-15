@@ -454,13 +454,17 @@ a.courseTitle {
     display: block;
     padding-top: 20px;
 }
-
+a.courseTitle:hover
+{
+    color: #0cbfc9;
+}
 a.courseAuthor {
     display: block;
     color: var(--brandgreen);
     text-decoration: none;
     padding-top: 6px;
 }
+a.courseAuthor:hover{ color: #000; }
 
 .card-text,
 p.card-text {
@@ -902,7 +906,10 @@ footer a:hover {
     border-radius: 5px;
     height: 48px;
 }
-
+.courseDetails .nav-pills .nav-link:hover {
+    background:#0cbfc9;
+    color: #fff;
+}
 .courseDetails .nav-pills .nav-link.active {
     background:#0cbfc9;
 }
@@ -1030,7 +1037,13 @@ ul.reviewList li {
     overflow: hidden;
     padding: 0;
 }
-
+ul.reviewList li
+{
+    padding: 30px !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 12px !important;
+    margin: 0 0 30px !important;
+}
 .stepNo {
     width: 80px;
 }
@@ -1065,11 +1078,13 @@ ul.reviewList li {
 .stepDetails {
     width: 100%;
     max-width: calc(100% - 80px);
-    padding-bottom: 50px;
+    padding-bottom: 30px;
+    color: #686868;
+    line-height: 28px;
 }
 
 .stepDetails h4 {
-    font-size: 22px;
+    font-size: 20px;
     color: var(--black);
     padding-bottom: 10px;
 }
@@ -1100,8 +1115,7 @@ ul.lessonStep li:last-child .stepNo:before {
 }
 
 .titleWithRatings {
-    display: flex;
-    justify-content: space-between;
+   
     padding-bottom: 15px;
 }
 

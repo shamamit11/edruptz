@@ -375,3 +375,61 @@ label small {
     font-size: 12px;
     color: #959595;
 }
+
+.star-rating {
+--star-size:1.9;
+	padding: 0;
+	border: none;
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	text-align: left;
+	user-select: none;
+	font-size: 2em;
+font-size:calc(var(--star-size) * 1em);
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	margin-bottom: 1em
+}
+.star-rating>label {
+	display: inline-block;
+	position: relative;
+	margin-top: 0
+}
+.star-rating:not(:hover)>input:checked~label, .star-rating>:hover, .star-rating>:hover~label {
+	color: transparent;
+	cursor: inherit
+}
+.star-rating:not(:hover)>input:checked~label:before, .star-rating>:hover:before, .star-rating>:hover~label:before {
+	content: "★";
+	position: absolute;
+	left: 0;
+	color: gold
+}
+.star-rating>input {
+	position: relative;
+	transform: scale(3);
+	transform: scale(var(--star-size));
+	top: -.5em;
+top:calc(var(--star-size)/ 6 * -1em);
+margin-left:-1.em;
+margin-left:calc(var(--star-size)/ 1 * -1em);
+	z-index: 2;
+	opacity: 0;
+	font-size: initial
+}
+
+
+element {
+}
+.mb-4, .my-4 {
+  margin-bottom: 1.5rem !important;
+}
+.mb-4, .my-4 {
+  margin-bottom: 1.5rem !important;
+}
+video {
+  width: 100%;
+  height: auto;
+}
+

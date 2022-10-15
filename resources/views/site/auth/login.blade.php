@@ -38,7 +38,7 @@
                         <input type="checkbox" name="remember_me" value="1">
                         <span class="pl-2 font-weight-bold"> Remember Me</span></label>
                     </div>
-                    <?php /*?> <div><a href="{{ route('forgot-password')  }}"> Forget Password?</a></div><?php */?>
+                     <div><a href="{{ route('forgot-password-student')  }}"> Forget Password?</a></div>
                   </div>
                 </div>
                 <div class="pb-2">
@@ -67,7 +67,7 @@
                         <input type="checkbox" name="remember_me" value="1">
                         <span class="pl-2 font-weight-bold"> Remember Me</span></label>
                     </div>
-                    <?php /*?> <div><a href="{{ route('forgot-password')  }}"> Forget Password?</a></div><?php */?>
+                     <div><a href="{{ route('forgot-password-instructor')  }}"> Forget Password?</a></div>
                   </div>
                 </div>
                 <div class="pb-2">

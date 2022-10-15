@@ -33,6 +33,7 @@ Route::group(['middleware' => 'adminauth'], function () {
     });
     Route::controller('InstructorController')->group(function () {
         Route::get('/instructor', 'index')->name('admin-instructor');
+        Route::get('/instructor/detail', 'detail')->name('admin-instructor-detail');
         Route::get('/instructor/add', 'addEdit')->name('admin-instructor-add');
         Route::post('/instructor/addaction', 'addAction')->name('admin-instructor-addaction');
         Route::get('/instructor/courses', 'courses')->name('admin-instructor-courses');

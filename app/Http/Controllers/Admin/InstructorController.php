@@ -36,6 +36,16 @@ class InstructorController extends Controller
         return view('admin.instructor.list', compact('nav', 'sub_nav'), $data);
     }
 
+    public function detail(Request $request)
+    {
+        $nav = 'instructor';
+        $sub_nav = '';
+        $id = ($request->id) ? $request->id : 0;
+        $data['title'] = "Instructor Detail";
+        $data['row'] = Instructor::where('id', $id)->first();
+        return view('admin.instructor.detail', compact('nav', 'sub_nav'), $data);
+    }
+
     public function addEdit(Request $request)
     {
         $nav = 'instructor';

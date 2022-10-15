@@ -35,10 +35,10 @@ class InstructorController extends Controller
         $nav = '';
         $page = 'detail';
         $data['row'] = Instructor::with('courses')->with('reviews')->with('reviews.student')->where('slug', $id)->first();
-        if ($data['row'] && $data['row']->status == '1') {
+        if ($data['row']) {
             return view('site.instructor.' . $page, compact('nav'), $data);
         } else {
-            redirect(route('/'));
+            return redirect(route('/'));
         }
     }
 
