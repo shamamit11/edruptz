@@ -1,14 +1,30 @@
 @php
 use App\Models\Setting;
+use App\Models\Seo;
 $setting = Setting::first();
 if(isset($row) && !empty($row)) { 
 	$meta_title = (isset($row->meta_title) && !empty($row->meta_title)) ? $row->meta_title : $setting->meta_title;
     $meta_description = (isset($row->meta_description) && !empty($row->meta_description)) ? $row->meta_description : $setting->meta_description;
-} else {
-    $meta_title = $setting->meta_title;
-    $meta_description = $setting->meta_description;
+} 
+else {
+    if(isset($seo_link) && !empty($seo_link)) {
+        $seo = SEO::where('link', $seo_link)->first();
+        if($seo) {
+            $meta_title = $seo->meta_title;
+            $meta_description = $seo->meta_description;
+        }
+        else {
+            $meta_title = $setting->meta_title;
+            $meta_description = $setting->meta_description;
+        }
+    }
+    else {
+        $meta_title = $setting->meta_title;
+        $meta_description = $setting->meta_description;
+    } 
 }
 @endphp
+
 <!doctype html>
 
 <html>

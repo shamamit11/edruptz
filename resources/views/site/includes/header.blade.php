@@ -1,8 +1,8 @@
 @php
 use Illuminate\Support\Facades\Auth;
+use App\Models\Setting;
 use App\Models\Socialicon;
 $socialicon = Socialicon::first();
-use App\Models\Setting;
 $setting = Setting::first();
 @endphp
 <div class="transparent_header">
