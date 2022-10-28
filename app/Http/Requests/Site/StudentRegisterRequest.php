@@ -25,7 +25,7 @@ class StudentRegisterRequest extends WebRequest
     {
         return [
             'name' => 'required',
-            'email' => ($this->user_type) ? 'required|email|unique:students' : '',
+            'email' => 'required|email|unique:students',
             'password' => [
                 'required',
                 'string',

@@ -25,7 +25,7 @@ class InstructorRegisterRequest extends WebRequest
     {
         return [
             'name' => 'required',
-            'email' => ($this->user_type) ? 'required|email|unique:instructors' : '',
+            'email' => 'required|email|unique:instructors',
             'password' => [
                 'required',
                 'string',
