@@ -1,4 +1,4 @@
-@php use App\Models\Course @endphp 
+@php use App\Models\Course; @endphp 
 @if($courses->count() > 0)
 <section>
   <div class="container">
@@ -16,6 +16,8 @@
             <h3 class="card-title"><a class="courseTitle" href="{{ $course->slug }}">{{ $course->name }}</a></h3>
             <a class="courseAuthor" href="{{ $course->instructor->slug }}">{{ $course->instructor->name }}</a>
             <p class="card-text">{{ $course->summary }}</p>
+
+            @if($course->sales->count() > 0 || $avg_rating > 0)
             <ul class="courseSMList">
               <li><i class="fa fa-user-circle" aria-hidden="true"></i> {{ $course->sales->count() }} Student(s)</li>
               <li>@if($avg_rating > 0)
@@ -23,6 +25,8 @@
               <i class="fa fa-star text-warning" aria-hidden="true"></i> @endfor @else   <i class="fa fa-star-o text-warning"></i> <i class="fa fa-star-o text-warning"></i> <i class="fa fa-star-o text-warning"></i> <i class="fa fa-star-o text-warning"></i> <i class="fa fa-star-o text-warning"></i> @endif</li>  
               <li>USD {{ $course->amount }}</li>
             </ul>
+            @endif
+
           </div>
         </div>
       </div>
