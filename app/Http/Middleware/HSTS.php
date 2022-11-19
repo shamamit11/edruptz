@@ -12,7 +12,7 @@ class HSTS
     {
         $response = $next($request);
 
-        $response->header('Strict-Transport-Security', 'max-age=31536000; includeSubdomains');
+        $response->headers->set('Strict-Transport-Security', 'max-age=31536000; includeSubdomains');
 
         return $response;
     }

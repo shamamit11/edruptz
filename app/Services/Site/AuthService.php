@@ -55,9 +55,7 @@ class AuthService
             $message->from('noreply@edruptz.com', env('APP_NAME'));
             $message->to($request['email']);
             $message->subject('Email Verification');
-          });
-  
-
+        });
     }
 
     public function registerStudent($request)
@@ -73,7 +71,7 @@ class AuthService
             $message->from('noreply@edruptz.com', env('APP_NAME'));
             $message->to($request['email']);
             $message->subject('Email Verification');
-          });
+        });
     }
 
     public function verificationStudent($code)

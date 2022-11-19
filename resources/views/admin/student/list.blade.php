@@ -20,6 +20,7 @@
                                 data-feather="search"></i></button>
                     </div>
                 </form>
+                <a href="{{ route('admin-student-export') }}" class="btn btn-primary my-2 my-sm-0 ms-1"> Export to Excel</a>
             </nav>
         </div>
         <div class="card-body"> @include('admin.includes.alert')

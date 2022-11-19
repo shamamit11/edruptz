@@ -16,6 +16,9 @@ use App\Http\Requests\Instructor\CourseRequest;
 use App\Http\Requests\Instructor\LessonRequest;
 use Illuminate\Support\Facades\Storage;
 
+use App\Exports\InstructorsExport;
+use Maatwebsite\Excel\Facades\Excel;
+
 class InstructorController extends Controller
 {
     protected $instructor;
@@ -34,6 +37,13 @@ class InstructorController extends Controller
         $q = ($request->has('q') && !empty($request->q)) ? $request->q : '';
         $data = $this->instructor->List($per_page, $page, $q);
         return view('admin.instructor.list', compact('nav', 'sub_nav'), $data);
+    }
+
+    public function export() 
+    {
+        $export = new InstructorsExport();
+        $file_name = 'instructors-'.time().'.xlsx';
+        return Excel::download($export, $file_name);
     }
 
     public function detail(Request $request)

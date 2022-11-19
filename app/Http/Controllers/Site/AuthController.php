@@ -13,6 +13,7 @@ use App\Models\Instructor;
 use App\Models\Student;
 use App\Services\Site\AuthService;
 use Illuminate\Support\Facades\Auth;
+use Mail;
 
 class AuthController extends Controller
 {
@@ -29,7 +30,7 @@ class AuthController extends Controller
             return redirect()->intended(route('instructor-dashboard'));
         }
         if (Auth::guard('student')->user()) {
-            return redirect()->intended(route('student-dashboard'));
+            return redirect()->intended(route('/'));
         }
         return view('site.auth.login');
     }
@@ -93,7 +94,12 @@ class AuthController extends Controller
             $student = Student::find($id);
             if ($student->email_verified == 0) {
                 Auth::guard('student')->logout();
-                $message = "Email is not verified. Please verified to continue further";
+                $message = "Email is not verified. Please check your email for Verification Link. ";
+                Mail::send('email.student', ['token' => $student->verified_code], function($message) use($request, $student){
+                    $message->from('noreply@edruptz.com', env('APP_NAME'));
+                    $message->to($student->email);
+                    $message->subject('Email Verification from Edruptz');
+                });
                 return redirect()->back()->withErrors(['error' => $message])->withInput($request->only('email'));
             }
             return redirect()->intended(route('student-dashboard'));
@@ -110,9 +116,17 @@ class AuthController extends Controller
         if ($res) {
             $id = Auth::guard('instructor')->id();
             $instructor = Instructor::find($id);
+            
             if ($instructor->email_verified == 0) {
                 Auth::guard('instructor')->logout();
-                $message = "Email is not verified. Please verified to continue further";
+                $message = "Email is not verified. Please check your email for Verification Link. ";
+
+                Mail::send('email.instructor', ['token' => $instructor->verified_code], function($message) use($request, $instructor){
+                    $message->from('noreply@edruptz.com', env('APP_NAME'));
+                    $message->to($instructor->email);
+                    $message->subject('Email Verification from Edruptz');
+                });
+
                 return redirect()->back()->withErrors(['error' => $message])->withInput($request->only('email'));
             }
             return redirect()->intended(route('instructor-dashboard'));

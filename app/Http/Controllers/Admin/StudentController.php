@@ -9,6 +9,9 @@ use App\Services\Admin\StudentService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
+use App\Exports\StudentsExport;
+use Maatwebsite\Excel\Facades\Excel;
+
 class StudentController extends Controller
 {
     protected $student;
@@ -27,5 +30,12 @@ class StudentController extends Controller
         $q = ($request->has('q') && !empty($request->q)) ? $request->q : '';
         $data = $this->student->List($per_page, $page, $q);
         return view('admin.student.list', compact('nav', 'sub_nav'), $data);
+    }
+
+    public function export() 
+    {
+        $export = new StudentsExport();
+        $file_name = 'students-'.time().'.xlsx';
+        return Excel::download($export, $file_name);
     }
 }

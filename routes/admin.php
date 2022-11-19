@@ -34,6 +34,7 @@ Route::group(['middleware' => 'adminauth'], function () {
     Route::controller('InstructorController')->group(function () {
         Route::get('/instructor', 'index')->name('admin-instructor');
         Route::get('/instructor/detail', 'detail')->name('admin-instructor-detail');
+        Route::get('/instructor/export', 'export')->name('admin-instructor-export');
         Route::get('/instructor/add', 'addEdit')->name('admin-instructor-add');
         Route::post('/instructor/addaction', 'addAction')->name('admin-instructor-addaction');
         Route::get('/instructor/courses', 'courses')->name('admin-instructor-courses');
@@ -47,6 +48,7 @@ Route::group(['middleware' => 'adminauth'], function () {
     });
     Route::controller('StudentController')->group(function () {
         Route::get('/student', 'index')->name('admin-student');
+        Route::get('/student/export', 'export')->name('admin-student-export');
     });
     Route::controller('SearchController')->group(function () {
         Route::get('/search', 'index')->name('admin-search');
