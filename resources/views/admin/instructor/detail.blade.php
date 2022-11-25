@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-md-8 col-sm-8 col-xs-8">
                 <div class="mb-3">
-                <label class="form-label">Name</label><br> {{  $row->name}}
+                <label class="form-label">Name</label><br> {{  $row->name}} {{  $row->last_name}}
 
             </div>
             <div class="mb-3">

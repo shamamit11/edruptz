@@ -34,6 +34,14 @@
                                         @endif
                                     </div>
                                     <div class="mb-3">
+                                        <label class="form-label">Last Name</label>
+                                        <input class="form-control" name="last_name"
+                                            value="{{ old('last_name', isset($user->last_name) ? $user->last_name : '') }}" type="text">
+                                        @if ($errors->has('last_name'))
+                                            <div class="error">{{ $errors->first('last_name') }}</div>
+                                        @endif
+                                    </div>
+                                    <div class="mb-3">
                                         <label class="form-label">Email</label>
                                         <input class="form-control" name="email"
                                             value="{{ old('email', isset($user->email) ? $user->email : '') }}"

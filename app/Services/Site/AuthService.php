@@ -45,6 +45,7 @@ class AuthService
         $slug = Slug::insertSlug("Instructor", "InstructorDetail", $slug_name, '');
         $instructor = new Instructor;
         $instructor->name = $request['name'];
+        $instructor->last_name = $request['last_name'];
         $instructor->email = $request['email'];
         $instructor->password = Hash::make($request['password']);
         $instructor->verified_code = $verified_code;
@@ -63,6 +64,7 @@ class AuthService
         $verified_code = Str::random(64);
         $student = new Student;
         $student->name = $request['name'];
+        $student->last_name = $request['last_name'];
         $student->email = $request['email'];
         $student->password = Hash::make($request['password']);
         $student->verified_code = $verified_code;

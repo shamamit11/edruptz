@@ -26,11 +26,19 @@
                                 <form action="{{ $profile_action }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="mb-3">
-                                        <label class="form-label">Name</label>
+                                        <label class="form-label">First Name</label>
                                         <input class="form-control" name="name"
                                             value="{{ old('name', isset($user->name) ? $user->name : '') }}" type="text">
                                         @if ($errors->has('name'))
                                             <div class="error">{{ $errors->first('name') }}</div>
+                                        @endif
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Last Name</label>
+                                        <input class="form-control" name="last_name"
+                                            value="{{ old('last_name', isset($user->last_name) ? $user->last_name : '') }}" type="text">
+                                        @if ($errors->has('last_name'))
+                                            <div class="error">{{ $errors->first('last_name') }}</div>
                                         @endif
                                     </div>
                                     <div class="mb-3">

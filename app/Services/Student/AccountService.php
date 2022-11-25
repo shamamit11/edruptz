@@ -23,6 +23,7 @@ class AccountService
             $image = $request['old_image'];
         }
         $student->name = $request['name'];
+        $student->last_name = $request['last_name'];
         $student->image = $image;
         $student->address = $request['country'];
         $student->city = $request['city'];

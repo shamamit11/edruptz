@@ -25,6 +25,7 @@ class StudentRegisterRequest extends WebRequest
     {
         return [
             'name' => 'required',
+            'last_name' => 'required',
             'email' => 'required|email|unique:students',
             'password' => [
                 'required',
@@ -42,6 +43,8 @@ class StudentRegisterRequest extends WebRequest
     public function messages()
     {
         return [
+            'name' =>  __('First Name is required'),
+            'last_name' => __('Last Name is required'),
             'password' => __('At least 8 characters with 1 Uppercase, 1 Number and 1 character'),
             'verify' => __('Password does not match'),
         ];

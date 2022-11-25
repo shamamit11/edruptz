@@ -51,7 +51,7 @@ use App\Models\CourseReview;
                     @endphp
                     <tr id="tr{{ $row->id }}">
                         <td>{{ $count++ }}</td>
-                        <td>{{ $row->name }}</td>
+                        <td>{{ $row->name }} {{ $row->last_name }}</td>
                         <td>{{ $row->professional }}</td>
                         <td>{{ $row->email }}</td>
                         <td>{{ $row->address }}</td>

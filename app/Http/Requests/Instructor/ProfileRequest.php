@@ -25,6 +25,7 @@ class ProfileRequest extends WebRequest
         return [
             'id' => 'integer|nullable',  
             'name' => 'required',
+            'last_name' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg',
             'old_image' => '',
             'location' => 'required',

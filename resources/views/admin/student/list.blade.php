@@ -38,7 +38,7 @@
                     @foreach ($data as $row)
                     <tr id="tr{{ $row->id }}">
                         <td>{{ $count++ }}</td>
-                        <td>{{ $row->name }}</td>
+                        <td>{{ $row->name }} {{ $row->last_name }}</td>
                         <td>{{ $row->email }}</td>
                         <td>{{ $row->address }}</td>
                     </tr>
