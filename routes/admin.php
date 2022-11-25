@@ -94,6 +94,7 @@ Route::group(['middleware' => 'adminauth'], function () {
     
     Route::controller('EmailController')->group(function () {
         Route::get('/email', 'index')->name('admin-email');
+        Route::get('/email/export', 'export')->name('admin-email-export');
         Route::post('/email/delete', 'delete')->name('admin-email-delete');
 
     });

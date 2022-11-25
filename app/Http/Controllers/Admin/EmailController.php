@@ -7,6 +7,9 @@ use App\Models\Email;
 use App\Services\Admin\EmailService;
 use Illuminate\Http\Request;
 
+use App\Exports\EmailExport;
+use Maatwebsite\Excel\Facades\Excel;
+
 class EmailController extends Controller
 {
     protected $email;
@@ -25,6 +28,13 @@ class EmailController extends Controller
         $q = ($request->has('q') && !empty($request->q)) ? $request->q : '';
         $data = $this->email->List($per_page, $page, $q);
         return view('admin.email.list', compact('nav', 'sub_nav'), $data);
+    }
+
+    public function export() 
+    {
+        $export = new EmailExport();
+        $file_name = 'newsletter-'.time().'.xlsx';
+        return Excel::download($export, $file_name);
     }
 
     public function delete(Request $request)
