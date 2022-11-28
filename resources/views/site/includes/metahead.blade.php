@@ -36,6 +36,9 @@ else {
 <meta property="og:title" content="{{ $meta_title }}" />
 <meta name="description" content="{{  $meta_description }}" />
 <meta property="og:description" content="{{  $meta_description }}" />
+@if(@$sub_nav == 'course_detail' && @$row->image)
+<meta property="og:image" content="{{ asset('storage/uploads/course/' . $row->image) }}" />
+@endif
 @if($setting->google_site_verification )
 <meta name="google-site-verification" content="{{ $setting->google_site_verification }}" />
 @endif
