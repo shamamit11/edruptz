@@ -24,7 +24,7 @@ class CourseRequest extends WebRequest
     public function rules()
     {
         return [
-            'id' => 'integer|nullable',
+            'id' => 'numeric|nullable',
             'category_id' => 'required',
             'name' => 'required',
             'summary' => 'required',

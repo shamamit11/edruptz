@@ -23,7 +23,7 @@ class LessonRequest extends WebRequest
     public function rules()
     {
         return [
-            'id' => 'integer|nullable',  
+            'id' => 'numeric|nullable',  
             'course_id' => 'required',
             'name' => 'required',
             'summary' => 'required',
@@ -34,7 +34,7 @@ class LessonRequest extends WebRequest
             'old_file' => '',
             'video' => '',
             'old_video' => '',
-            'lesson_number' => 'required|integer',
+            'lesson_number' => 'required|numeric',
         ];
     }
 }

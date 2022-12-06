@@ -35,6 +35,7 @@ class CourseController extends Controller
     {
         $slug = $request->segment(1);
         $nav = 'course';
+        $sub_nav = 'course_detail';
         $data['count'] = 1;
         $data['row'] = Course::with('lessons')->with('reviews')->with('reviews.student')->with('reviews.reply')->with('instructor')->with('instructor.courses')->with('sales')->with('category')->where('slug', $slug)->first();
 
@@ -43,7 +44,7 @@ class CourseController extends Controller
             $share_buttons = \Share::page(route($data['row']->slug), $data['row']->name)->facebook()->twitter()->linkedin()->whatsapp()->telegram();
             $data['share_buttons'] = $share_buttons;
             $data['related_courses'] = Course::where('category_id', $data['row']->category_id)->where([['id', '<>', $data['row']->id], ['status', '=', 1]])->inRandomOrder()->limit(9)->get();
-            return view('site.course.detail', compact('nav'), $data);
+            return view('site.course.detail', compact('nav', 'sub_nav'), $data);
         } else {
             return redirect(route('/'));
         }
