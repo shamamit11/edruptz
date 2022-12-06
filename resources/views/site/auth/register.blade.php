@@ -49,7 +49,7 @@
                                         @endif
                                     </div>
                                     <div class="form-group">
-                                        <label>Password</label>
+                                        <label>Password <small style="font-size: 11px">(At least 8 char with 1 Uppercase, 1 Number and 1 Special Character)</small></label>
                                         <input class="form-control" name="password" value="{{ old('password') }}"
                                             placeholder="Password" type="password">
                                         @if ($errors->has('password'))
@@ -99,7 +99,7 @@
                                         @endif
                                     </div>
                                     <div class="form-group">
-                                        <label>Password</label>
+                                        <label>Password <small style="font-size: 11px">(At least 8 char with 1 Uppercase, 1 Number and 1 Special Character)</small></label>
                                         <input class="form-control" name="password" value="{{ old('password') }}"
                                             placeholder="Password" type="password">
                                         @if ($errors->has('password'))

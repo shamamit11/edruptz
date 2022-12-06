@@ -2,77 +2,85 @@
 
 /* CSS Document */
 
- :root {
+:root {
     --black: #000;
-    --brandblue: #0CBFC9;
-    --branddblue: #05A3AD;
-    --brandgreen: #33D7B4;
-    --brandlgreen: #78F199;
+    --brandblue: #0cbfc9;
+    --branddblue: #05a3ad;
+    --brandgreen: #33d7b4;
+    --brandlgreen: #78f199;
     --brandgrey: #969696;
-    --brandlgrey: #DEDEDE;
+    --brandlgrey: #dedede;
     --branddarkgrey: #1b1b1b;
     --white: #ffffff;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap");
 @font-face {
-    font-family: 'Typo Round Italic Demo';
+    font-family: "Typo Round Italic Demo";
     font-style: normal;
     font-weight: normal;
-    src: local('Typo Round Italic Demo'), url('../fonts/Typo_Round_Italic_Demo.woff') format('woff');
+    src: local("Typo Round Italic Demo"),
+        url("../fonts/Typo_Round_Italic_Demo.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Typo Round Thin Italic Demo';
+    font-family: "Typo Round Thin Italic Demo";
     font-style: normal;
     font-weight: normal;
-    src: local('Typo Round Thin Italic Demo'), url('T../fonts/ypo_Round_Thin_Italic Demo.woff') format('woff');
+    src: local("Typo Round Thin Italic Demo"),
+        url("T../fonts/ypo_Round_Thin_Italic Demo.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Typo Round Light Italic Demo';
+    font-family: "Typo Round Light Italic Demo";
     font-style: normal;
     font-weight: normal;
-    src: local('Typo Round Light Italic Demo'), url('../fonts/Typo_Round_Light_Italic_Demo.woff') format('woff');
+    src: local("Typo Round Light Italic Demo"),
+        url("../fonts/Typo_Round_Light_Italic_Demo.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Typo Round Bold Italic Demo';
+    font-family: "Typo Round Bold Italic Demo";
     font-style: normal;
     font-weight: normal;
-    src: local('Typo Round Bold Italic Demo'), url('../fonts/Typo_Round_Bold_Italic_Demo.woff') format('woff');
+    src: local("Typo Round Bold Italic Demo"),
+        url("../fonts/Typo_Round_Bold_Italic_Demo.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Typo Round Regular Demo Regular';
+    font-family: "Typo Round Regular Demo Regular";
     font-style: normal;
     font-weight: normal;
-    src: local('Typo Round Regular Demo Regular'), url('../fonts/Typo_Round_Regular_Demo.woff') format('woff');
+    src: local("Typo Round Regular Demo Regular"),
+        url("../fonts/Typo_Round_Regular_Demo.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Typo Round Thin Demo Regular';
+    font-family: "Typo Round Thin Demo Regular";
     font-style: normal;
     font-weight: normal;
-    src: local('Typo Round Thin Demo Regular'), url('../fonts/Typo_Round_Thin_Demo.woff') format('woff');
+    src: local("Typo Round Thin Demo Regular"),
+        url("../fonts/Typo_Round_Thin_Demo.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Typo Round Light Demo Regular';
+    font-family: "Typo Round Light Demo Regular";
     font-style: normal;
     font-weight: normal;
-    src: local('Typo Round Light Demo Regular'), url('../fonts/Typo_Round_Light_Demo.woff') format('woff');
+    src: local("Typo Round Light Demo Regular"),
+        url("../fonts/Typo_Round_Light_Demo.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Typo Round Bold Demo Regular';
+    font-family: "Typo Round Bold Demo Regular";
     font-style: normal;
     font-weight: normal;
-    src: local('Typo Round Bold Demo Regular'), url('../fonts/Typo_Round_Bold_Demo.woff') format('woff');
+    src: local("Typo Round Bold Demo Regular"),
+        url("../fonts/Typo_Round_Bold_Demo.woff") format("woff");
 }
 
 .show-icons .title_reveal {
-    font-family: 'Typo Round Bold Demo Regular'!important;
+    font-family: "Typo Round Bold Demo Regular" !important;
 }
 
 html,
@@ -163,7 +171,6 @@ video {
     vertical-align: baseline;
 }
 
-
 /* HTML5 display-role reset for older browsers */
 
 article,
@@ -182,12 +189,12 @@ section {
 
 body {
     line-height: 1;
-    font-family: 'Open Sans', sans-serif;
-    color: var(--branddarkgrey)!important;
+    font-family: "Open Sans", sans-serif;
+    color: var(--branddarkgrey) !important;
 }
 
 body p {
-    line-height: 1.4!important;
+    line-height: 1.4 !important;
 }
 
 ol,
@@ -204,7 +211,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
+    content: "";
     content: none;
 }
 
@@ -231,31 +238,27 @@ h1 {
 }
 
 .space-between {
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .vallBtn {
     color: var(--black);
     text-decoration: none;
 }
-a.vallBtn
-{
+a.vallBtn {
     border-radius: 4px;
     border: 1px solid #0cbfc9;
-    padding:12px 15px 0 15px !important;
+    padding: 12px 15px 0 15px !important;
 }
-a.vallBtn:hover, a.vallBtn:focus
-{
+a.vallBtn:hover,
+a.vallBtn:focus {
     background: #0cbfc9;
-    color: #fff;   
+    color: #fff;
 }
-@media (max-width:767px) 
-{
- a.vallBtn
-{
-  
-    padding:12px 15px !important;
-}
+@media (max-width: 767px) {
+    a.vallBtn {
+        padding: 12px 15px !important;
+    }
 }
 .txtBlue {
     color: var(--brandblue);
@@ -271,7 +274,7 @@ a.vallBtn:hover, a.vallBtn:focus
     height: 100%;
     z-index: 0;
     background-color: #080d15;
-    opacity: .7;
+    opacity: 0.7;
     left: 0;
     top: 0;
 }
@@ -287,7 +290,7 @@ a.vallBtn:hover, a.vallBtn:focus
 }
 
 .carousel-caption h1 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 42px;
 }
 
@@ -318,7 +321,7 @@ ul.banList a {
     font-size: 17px;
     display: block;
     padding: 15px 20px;
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
     line-height: 1;
     -webkit-border-radius: 10px;
@@ -388,7 +391,6 @@ a.dropdown-item:hover {
     border: 0;
 }
 
-
 /* Flip Cards CSS */
 
 .card-container {
@@ -454,8 +456,7 @@ a.courseTitle {
     display: block;
     padding-top: 20px;
 }
-a.courseTitle:hover
-{
+a.courseTitle:hover {
     color: #0cbfc9;
 }
 a.courseAuthor {
@@ -464,7 +465,9 @@ a.courseAuthor {
     text-decoration: none;
     padding-top: 6px;
 }
-a.courseAuthor:hover{ color: #000; }
+a.courseAuthor:hover {
+    color: #000;
+}
 
 .card-text,
 p.card-text {
@@ -512,7 +515,7 @@ p.card-text:before {
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
 }
 
 ul.courseSMList {
@@ -596,9 +599,9 @@ a.btnWhite {
 .teacherCards h4 {
     color: var(--brandgrey);
     height: 40px;
-overflow: hidden;
-font-size: 14px;
-line-height: 21px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 21px;
 }
 
 .teacherCards .image {
@@ -606,8 +609,7 @@ line-height: 21px;
     height: 165px;
     width: 100%;
 }
-.teacherCards .image img
-{
+.teacherCards .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -631,34 +633,34 @@ line-height: 21px;
 
 .stats {
     background: #f2f5f8 !important;
-    color: #000 !important
+    color: #000 !important;
 }
 
 .articles {
     font-size: 10px;
-    color: #a1aab9
+    color: #a1aab9;
 }
 
 .number1 {
-    font-weight: 500
+    font-weight: 500;
 }
 
 .followers {
     font-size: 10px;
-    color: #a1aab9
+    color: #a1aab9;
 }
 
 .number2 {
-    font-weight: 500
+    font-weight: 500;
 }
 
 .rating {
     font-size: 10px;
-    color: #a1aab9
+    color: #a1aab9;
 }
 
 .number3 {
-    font-weight: 500
+    font-weight: 500;
 }
 
 .ml-2 {
@@ -711,7 +713,7 @@ ul.socialList li a {
 
 .testimonialBelt:after {
     content: "\f10e";
-    font-family: 'FontAwesome';
+    font-family: "FontAwesome";
     font-size: 300px;
     position: absolute;
     top: 37px;
@@ -722,10 +724,10 @@ ul.socialList li a {
 }
 
 .owl-theme .owl-dots .owl-dot span {
-    width: 40px!important;
-    height: 6px!important;
+    width: 40px !important;
+    height: 6px !important;
     margin: 5px 7px;
-    background: #0CBFC9;
+    background: #0cbfc9;
     display: block;
     transition: opacity 200ms ease;
     border-radius: 30px;
@@ -733,7 +735,7 @@ ul.socialList li a {
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-    background: var(--brandgreen)!important;
+    background: var(--brandgreen) !important;
 }
 
 ul.tickList {
@@ -758,8 +760,8 @@ ul.tickList li {
 }
 
 .videoBox iframe {
-    width: 100%!important;
-    max-width: 100%!important;
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
 .patternBg {
@@ -769,12 +771,12 @@ ul.tickList li {
 
 .fa-angle-right:before {
     content: "\f054";
-    font-family: 'FontAwesome';
+    font-family: "FontAwesome";
 }
 
 .fa-angle-left:before {
     content: "\f053";
-    font-family: 'FontAwesome';
+    font-family: "FontAwesome";
 }
 
 p.ftrTxt {
@@ -809,19 +811,18 @@ footer a:hover {
 }
 
 .footerBox form .form-control {
-    ;
     color: #fff;
-    background-color: #43DEE7;
+    background-color: #43dee7;
     background-clip: padding-box;
-    border: 1px solid #43DEE7;
+    border: 1px solid #43dee7;
 }
 
-.footerBox form [type=submit] {
+.footerBox form [type="submit"] {
     margin-top: 15px;
 }
 
 .copyright {
-    background: #05A3AD;
+    background: #05a3ad;
     padding: 20px 0;
     font-size: 14px;
 }
@@ -856,13 +857,13 @@ footer a:hover {
 
 .ibCont .form-outline {
     width: 100%;
-    max-width: calc( 100% - 140px);
+    max-width: calc(100% - 140px);
 }
 
 .ibCont .btn-green {
     width: 100%;
     max-width: 130px;
-    border-radius: 4px!important;
+    border-radius: 4px !important;
 }
 
 .ibCont form {
@@ -907,11 +908,11 @@ footer a:hover {
     height: 48px;
 }
 .courseDetails .nav-pills .nav-link:hover {
-    background:#0cbfc9;
+    background: #0cbfc9;
     color: #fff;
 }
 .courseDetails .nav-pills .nav-link.active {
-    background:#0cbfc9;
+    background: #0cbfc9;
 }
 
 .courseDetails .tab-content {
@@ -919,7 +920,7 @@ footer a:hover {
 }
 
 .courseDetails .tab-content p {
-    line-height: 1.8!important;
+    line-height: 1.8 !important;
 }
 
 .coursePrice h1 a,
@@ -959,7 +960,7 @@ footer a:hover {
 
 .searchFilter .dropdown-toggle::after {
     content: "\f0b0";
-    font-family: 'FontAwesome';
+    font-family: "FontAwesome";
     margin: 0;
     padding: 0;
     position: absolute;
@@ -1001,7 +1002,7 @@ footer a:hover {
 }
 
 .searchFilter .form-check-input {
-    margin-top: 0!important;
+    margin-top: 0 !important;
 }
 
 .courseFeatures {
@@ -1037,8 +1038,7 @@ ul.reviewList li {
     overflow: hidden;
     padding: 0;
 }
-ul.reviewList li
-{
+ul.reviewList li {
     padding: 30px !important;
     border: 1px solid #e0e0e0 !important;
     border-radius: 12px !important;
@@ -1055,7 +1055,7 @@ ul.reviewList li
     justify-content: center;
     width: 50px;
     height: 50px;
-    background: #78F199;
+    background: #78f199;
     color: var(--black);
     font-size: 20px;
     -webkit-border-radius: 200px;
@@ -1115,7 +1115,6 @@ ul.lessonStep li:last-child .stepNo:before {
 }
 
 .titleWithRatings {
-   
     padding-bottom: 15px;
 }
 
@@ -1147,18 +1146,17 @@ ul.btnList li a {
     width: 150px;
     text-align: center;
     text-decoration: none;
-    color: #FFF;
+    color: #fff;
     border-radius: 5px;
 }
-.btn-blue2{
-  background:#0cbfc9;
-  color: var(--white);
-  transition: 1s ease;
+.btn-blue2 {
+    background: #0cbfc9;
+    color: var(--white);
+    transition: 1s ease;
 }
-.btn-blue2:hover
-{
-   background:#33d7b4;
-   color: var(--white);
+.btn-blue2:hover {
+    background: #33d7b4;
+    color: var(--white);
 }
 .erollandShare {
     margin-top: 30px;
@@ -1203,7 +1201,7 @@ h4.univ {
 
 .badge {
     padding: 0.35em 0em;
-    font-size: .85em;
+    font-size: 0.85em;
     font-weight: 700;
     line-height: 1;
     color: #cfcfcf;
@@ -1211,7 +1209,7 @@ h4.univ {
 
 .loginRegister.accountSetting {
     width: 100%;
-    max-width: 420px;
+    max-width: 520px;
 }
 
 .accountSetting .form-control,
@@ -1250,7 +1248,7 @@ h2.styleTitle:after {
 }
 
 .blogs .card {
-    border: 1px solid rgba(0, 0, 0, .125)!important;
+    border: 1px solid rgba(0, 0, 0, 0.125) !important;
 }
 
 .cart-product-imitation {
@@ -1293,7 +1291,7 @@ table.shoping-cart-table {
 table.shoping-cart-table tr,
 table.shoping-cart-table td,
 .table-responsive {
-    vertical-align: top!important;
+    vertical-align: top !important;
 }
 
 table.shoping-cart-table tr td {
@@ -1385,25 +1383,25 @@ table.shoping-cart-table tr td:last-child {
 }
 
 .page-item.active .page-link {
-    background-color: var(--brandblue)!important;
-    border-color: var(--brandblue)!important;
+    background-color: var(--brandblue) !important;
+    border-color: var(--brandblue) !important;
 }
 
 .page-link {
-    color: var(--brandblue)!important;
+    color: var(--brandblue) !important;
 }
 
 .blogs h5.card-title {
     font-size: 24px;
     font-weight: 500;
-    color: var(--brandblue)!important;
+    color: var(--brandblue) !important;
     padding-top: 15px;
 }
 
 a.blogSingleLink {
     font-size: 18px;
     font-weight: 500;
-    color: var(--brandblue)!important;
+    color: var(--brandblue) !important;
     text-decoration: none;
 }
 
@@ -1412,13 +1410,13 @@ a.blogSingleLink {
 }
 
 button.btn-brand {
-    background: var(--brandblue)!important;
-    border: 1px solid var(--brandblue)!important;
-    color: #FFF;
+    background: var(--brandblue) !important;
+    border: 1px solid var(--brandblue) !important;
+    color: #fff;
 }
 
 .loginRegister ul.nav-tabs {
-    border-bottom: 1px solid var(--brandblue)!important;
+    border-bottom: 1px solid var(--brandblue) !important;
 }
 
 .loginRegister li.nav-item a.list-group-item {
@@ -1428,8 +1426,8 @@ button.btn-brand {
 
 .loginRegister li.nav-item a.list-group-item.active {
     color: #fff;
-    background-color: var(--brandblue)!important;
-    border-color: var(--brandblue)!important;
+    background-color: var(--brandblue) !important;
+    border-color: var(--brandblue) !important;
 }
 
 .loginRegister li.nav-item a {
@@ -1448,7 +1446,6 @@ h2.lrTitle {
 .header-top .afterLogin.td.icon {
     width: 108px;
 }
-
 
 /*
 .lead-testimonial-cont { margin: 0 auto; padding: 0; width: 100%; max-width: 860px!important;}
@@ -1470,16 +1467,14 @@ h2.lrTitle {
     .container,
     .container-md,
     .container-sm {
-        width: 100%!important;
-        ;
-        max-width: 94%!important;
+        width: 100% !important;
+        max-width: 94% !important;
     }
     .content-row,
     .et_pb_row,
     body.et-db #et-boc .et_pb_row {
-        width: 100%!important;
-        ;
-        max-width: 94%!important;
+        width: 100% !important;
+        max-width: 94% !important;
     }
     .courseDetails .nav-link {
         font-size: 14px;
@@ -1501,10 +1496,10 @@ h2.lrTitle {
         display: block;
     }
     .fullFlex .container {
-        width: 100%!important;
-        max-width: 100%!important;
-        padding-right: 0!important;
-        padding-left: 0!important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
     }
     .ffPic {
         position: relative;
@@ -1527,16 +1522,14 @@ h2.lrTitle {
     .container,
     .container-md,
     .container-sm {
-        width: 100%!important;
-        ;
-        max-width: calc(100% - 30px)!important;
+        width: 100% !important;
+        max-width: calc(100% - 30px) !important;
     }
     .content-row,
     .et_pb_row,
     body.et-db #et-boc .et_pb_row {
-        width: 100%!important;
-        ;
-        max-width: calc(100% - 30px)!important;
+        width: 100% !important;
+        max-width: calc(100% - 30px) !important;
     }
     .ffLeft {
         padding: 30px;
@@ -1576,13 +1569,13 @@ h2.lrTitle {
         margin: 15px 0 0 0;
     }
     .blogs.row.mb-5 {
-        margin-bottom: 2rem!important;
+        margin-bottom: 2rem !important;
     }
     .contactForm.mt-5 .row.mb-5 {
-        margin-bottom: 2rem!important;
+        margin-bottom: 2rem !important;
     }
     .contactForm.mt-5 {
-        margin-top: 2rem!important;
+        margin-top: 2rem !important;
     }
     h2.styleTitle {
         margin-bottom: 20px;
@@ -1597,13 +1590,13 @@ h2.lrTitle {
         flex-wrap: wrap;
     }
     .pt-5 {
-        padding-top: 1rem!important;
+        padding-top: 1rem !important;
     }
     .mt-5 {
-        margin-top: 1rem!important;
+        margin-top: 1rem !important;
     }
     .pb-5 {
-        padding-bottom: 1rem!important;
+        padding-bottom: 1rem !important;
     }
     .courseDetails .nav-link {
         margin-right: 1px;
@@ -1621,7 +1614,7 @@ h2.lrTitle {
         text-align: center;
         display: block;
         width: 100%;
-        border: 1px solid #0cbfc9 !im;
+        border: 1px solid #0cbfc9 !important;
         border-radius: 5px;
         margin: 15px 0 0 0;
     }
@@ -1629,29 +1622,29 @@ h2.lrTitle {
         padding-bottom: 20px;
     }
     .bestseller .cardPic img {
-        height: 210px!important;
+        height: 210px !important;
     }
     .teacherCards .image {
         margin-right: 0;
         margin: 0 auto;
     }
     .teacherCards .align-items-center {
-        text-align: center!important;
+        text-align: center !important;
     }
     .teacherCards .align-items-center h3 {
         padding-top: 10px;
     }
     .whyPort.pt-5 {
-        padding-top: 30px!important;
+        padding-top: 30px !important;
     }
     .whyPort.pb-5 {
-        padding-bottom: 30px!important;
+        padding-bottom: 30px !important;
     }
     .videoBox {
-        margin-top: 20px!important;
+        margin-top: 20px !important;
     }
     .titleWithAllbtn.pt-5 {
-        padding-top: 1rem!important;
+        padding-top: 1rem !important;
     }
     .accountSetting {
         padding: 30px 15px;
